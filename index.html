@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APSIT Campus Event Portal</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --apsit-blue: #0b3d91;
+      --apsit-dark: #1b263b;
+      --apsit-accent: #ff9f1c;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #212529;
+    }
+
+    /* APSIT Hero Section */
+    .apsit-hero {
+      background: linear-gradient(135deg, rgba(11, 61, 145, 0.92), rgba(27, 38, 59, 0.95)), 
+                  url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: #ffffff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .event-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+    }
+
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-card img {
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .form-box {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Custom Media Query Requirement */
+    @media (max-width: 768px) {
+      .apsit-hero {
+        padding: 40px 15px;
+      }
+      .apsit-hero h1 {
+        font-size: 1.85rem;
+      }
+      .form-box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-uppercase" href="#">APSIT Events</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#apsitNav" aria-controls="apsitNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="apsitNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="deptDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Departments
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="deptDrop">
+                <li><a class="dropdown-item" href="#departments">Information Technology</a></li>
+                <li><a class="dropdown-item" href="#departments">Computer Engineering</a></li>
+                <li><a class="dropdown-item" href="#departments">Computer Science & Engg (Data Science)</a></li>
+                <li><a class="dropdown-item" href="#departments">Computer Science & Engg (AIML)</a></li>
+                <li><a class="dropdown-item" href="#departments">Mechanical Engineering</a></li>
+                <li><a class="dropdown-item" href="#departments">Civil Engineering</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home / Hero Section -->
+    <section id="home" class="apsit-hero">
+      <div class="container">
+        <p class="text-uppercase tracking-wide mb-1 text-warning fw-semibold">Parshvanath Charitable Trust's</p>
+        <h1 class="display-6 fw-bold">A. P. Shah Institute of Technology</h1>
+        <p class="lead col-lg-8 mx-auto">Department of Information Technology - Campus Event Portal for Inter-College Fests, Hackathons, Technical Competitions, and Sports Meets.</p>
+        <a href="#events" class="btn btn-warning fw-bold px-4 py-2 mt-2">View Upcoming Events</a>
+      </div>
+    </section>
+
+    <!-- Event Showcase Section (At least 4 events) -->
+    <section id="events" class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Campus Events</h2>
+        <p class="text-muted">Register to showcase your technical and extra-curricular talents</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Event 1: OJUS Technical Fest -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 event-card">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="OJUS Technical Fest">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">OJUS Tech Fest</h5>
+              <p class="card-text text-muted small">APSIT's flagship annual technical festival featuring robotics arena, technical quizzes, and paper presentations.</p>
+              <ul class="list-unstyled small mb-4 mt-auto">
+                <li><strong>Date:</strong> October 16, 2026</li>
+                <li><strong>Time:</strong> 09:30 AM</li>
+                <li><strong>Venue:</strong> APSIT Main Auditorium</li>
+              </ul>
+              <a href="#register" class="btn btn-outline-primary w-100">Register</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2: HackTech Coding Competition -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 event-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="APSIT HackTech">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">HackTech Coding Cup</h5>
+              <p class="card-text text-muted small">Speed programming and algorithm optimization challenge hosted by the Department of Information Technology.</p>
+              <ul class="list-unstyled small mb-4 mt-auto">
+                <li><strong>Date:</strong> October 24, 2026</li>
+                <li><strong>Time:</strong> 10:30 AM</li>
+                <li><strong>Venue:</strong> IT Labs 401 & 402</li>
+              </ul>
+              <a href="#register" class="btn btn-outline-primary w-100">Register</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3: Capstone Project Exhibition -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 event-card">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Project Exhibition">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Project Exhibition</h5>
+              <p class="card-text text-muted small">Showcase of innovative mini-projects, full-stack implementations, and IoT hardware models evaluated by industry experts.</p>
+              <ul class="list-unstyled small mb-4 mt-auto">
+                <li><strong>Date:</strong> November 06, 2026</li>
+                <li><strong>Time:</strong> 10:00 AM</li>
+                <li><strong>Venue:</strong> Seminar Hall 1 & 2</li>
+              </ul>
+              <a href="#register" class="btn btn-outline-primary w-100">Register</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4: Annual Sports Day -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 event-card">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="APSIT Sports Gala">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Annual Sports Gala</h5>
+              <p class="card-text text-muted small">Inter-branch sports tournament covering cricket, football, volleyball, badminton, and chess matches.</p>
+              <ul class="list-unstyled small mb-4 mt-auto">
+                <li><strong>Date:</strong> November 20, 2026</li>
+                <li><strong>Time:</strong> 08:30 AM</li>
+                <li><strong>Venue:</strong> APSIT Sports Complex</li>
+              </ul>
+              <a href="#register" class="btn btn-outline-primary w-100">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section (HTML Table Requirement) -->
+    <section id="schedule" class="container py-4">
+      <div class="text-center mb-4">
+        <h3 class="fw-bold">APSIT Event Schedule (2026-27)</h3>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover align-middle text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Event Title</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Venue</th>
+              <th>Registration Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OJUS Tech Fest</td>
+              <td>16-10-2026</td>
+              <td>09:30 AM</td>
+              <td>Main Auditorium</td>
+              <td><span class="badge bg-success">Open</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>HackTech Coding Cup</td>
+              <td>24-10-2026</td>
+              <td>10:30 AM</td>
+              <td>IT Labs 401 & 402</td>
+              <td><span class="badge bg-success">Open</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Project Exhibition</td>
+              <td>06-11-2026</td>
+              <td>10:00 AM</td>
+              <td>Seminar Hall 1 & 2</td>
+              <td><span class="badge bg-warning text-dark">Upcoming</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Annual Sports Gala</td>
+              <td>20-11-2026</td>
+              <td>08:30 AM</td>
+              <td>APSIT Sports Complex</td>
+              <td><span class="badge bg-warning text-dark">Upcoming</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Event Registration Form Section -->
+    <section id="register" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="form-box">
+            <h3 class="fw-bold mb-2 text-center">Event Registration Form</h3>
+            <p class="text-muted text-center mb-4">Complete the form below to confirm your slot in upcoming APSIT events.</p>
+
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <!-- Student Name -->
+                <div class="col-md-6">
+                  <label for="studentName" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="studentName" placeholder="e.g., Aditya Sharma" required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <!-- Roll Number / Student ID -->
+                <div class="col-md-6">
+                  <label for="rollNumber" class="form-label">Roll Number / Student ID</label>
+                  <input type="text" class="form-control" id="rollNumber" placeholder="e.g., 23IT2014" required>
+                  <div class="invalid-feedback">Please enter your college roll number.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label">APSIT / Personal Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@apsit.edu.in" required>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+
+                <!-- Branch -->
+                <div class="col-md-3">
+                  <label for="branch" class="form-label">Branch</label>
+                  <select class="form-select" id="branch" required>
+                    <option value="" selected disabled>Select...</option>
+                    <option value="IT">IT</option>
+                    <option value="COMPS">COMPS</option>
+                    <option value="CS-DS">CS-DS</option>
+                    <option value="CS-AIML">CS-AIML</option>
+                    <option value="MECH">MECH</option>
+                    <option value="CIVIL">CIVIL</option>
+                  </select>
+                  <div class="invalid-feedback">Select branch.</div>
+                </div>
+
+                <!-- Year -->
+                <div class="col-md-3">
+                  <label for="year" class="form-label">Year</label>
+                  <select class="form-select" id="year" required>
+                    <option value="" selected disabled>Select...</option>
+                    <option value="FE">FE</option>
+                    <option value="SE">SE</option>
+                    <option value="TE">TE</option>
+                    <option value="BE">BE</option>
+                  </select>
+                  <div class="invalid-feedback">Select year.</div>
+                </div>
+
+                <!-- Gender -->
+                <div class="col-12">
+                  <label class="form-label d-block">Gender</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="other" value="Other" required>
+                    <label class="form-check-label" for="other">Other</label>
+                  </div>
+                </div>
+
+                <!-- Event Selection -->
+                <div class="col-12">
+                  <label for="eventSelect" class="form-label">Select Event</label>
+                  <select class="form-select" id="eventSelect" required>
+                    <option value="" selected disabled>Choose the event you want to participate in...</option>
+                    <option value="ojus">OJUS Tech Fest</option>
+                    <option value="hacktech">HackTech Coding Cup</option>
+                    <option value="project_exhibit">Project Exhibition</option>
+                    <option value="sports_gala">Annual Sports Gala</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose an event.</div>
+                </div>
+
+                <!-- Skills / Interests -->
+                <div class="col-12">
+                  <label for="skills" class="form-label">Skills / Domain Interests</label>
+                  <input type="text" class="form-control" id="skills" placeholder="e.g., Java, Full-Stack Web, Machine Learning, Athletics">
+                </div>
+
+                <!-- Message / Team Info -->
+                <div class="col-12">
+                  <label for="message" class="form-label">Remarks / Team Details</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Mention teammates (if any) or specific requirements..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 text-center mt-4">
+                  <button class="btn btn-primary px-5 py-2 fw-semibold" type="submit">Submit Registration</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer / Contact Details -->
+  <footer id="contact" class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <h6 class="fw-bold mb-1">A. P. Shah Institute of Technology</h6>
+      <p class="small text-secondary mb-1">Department of Information Technology | NBA Accredited</p>
+      <p class="small text-secondary mb-2">Survey No. 12, Opp. Hypercity Mall, Kasarvadavali, Ghodbunder Road, Thane (West) - 400 615</p>
+      <p class="small text-secondary mb-0">Event Inquiries: <a href="mailto:events@apsit.edu.in" class="text-info text-decoration-none">events@apsit.edu.in</a> | Contact: +91 22 2597 3737</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Client-Side Form Validation -->
+  <script>
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          } else {
+            event.preventDefault()
+            alert('Your registration for APSIT Events has been submitted successfully!')
+            form.reset()
+            form.classList.remove('was-validated')
+            return
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+</body>
+</html>
